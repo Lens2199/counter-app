@@ -12,7 +12,18 @@ let count = 0;
 // function to update the counter display
 function updateCounter() {
     counterDisplay.innerText = count;
-}
+    
+// change color based on the value of the counter
+    if (count > 0) {
+        counterDisplay.style.color = 'green';
+    } else if (count < 0) {
+            counterDisplay.style.color = 'red';
+        } else {
+            counterDisplay.style.color = 'black';
+        }
+        
+    }
+
 
 // function to update the counter display
 increaseBtn.addEventListener('click', () => {
